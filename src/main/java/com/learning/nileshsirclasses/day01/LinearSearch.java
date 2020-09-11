@@ -21,7 +21,9 @@ public class LinearSearch {
 
     static int linearSearch(int[] a, int key) {
         for (int i = 0; i < a.length; i++) {
+            out.printf("Comparing a[%d] == key -> %d == %d: %s%n", i, a[i], key, a[i] == key);
             if (a[i] == key) {
+                out.printf("found in index a[%d] -> %d%n",i,a[i]);
                 return i;
             }
         }

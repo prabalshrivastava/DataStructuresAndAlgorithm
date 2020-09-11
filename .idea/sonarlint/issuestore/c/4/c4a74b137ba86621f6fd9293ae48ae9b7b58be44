@@ -1,0 +1,10 @@
+
+]
+java:S1854";Remove this useless assignment to local variable "isPrime".(·¿ì‹øÿÿÿÿ8âÇÝÄÇ.
+W
+java:S1854"5Remove this useless assignment to local variable "n".(‡È¿­ÿÿÿÿÿ8Í¹ÉÄÇ.
+H
+java:S1481"&Remove this unused "n" local variable.(‡È¿­ÿÿÿÿÿ8Í¹ÉÄÇ.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(“×·ôþÿÿÿÿ8’¹íÄÇ.
+I
+java:S1481",Remove this unused "isPrime" local variable.(ƒöô¶8âÇÝÄÇ.

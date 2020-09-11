@@ -1,5 +1,7 @@
 package com.learning.nileshsirclasses.day01;
 
+import static java.lang.System.out;
+
 public class Factorial {
     public static void main(String[] args) {
 
@@ -8,8 +10,8 @@ public class Factorial {
         for (int i = 1; i <= n; i++) {
             result = result * i;
         }
-        System.out.println(result);
-        System.out.println(factorial(5));
+        out.println(result);
+        out.println(factorial(5));
     }
 
     public static int factorial(int n) {
