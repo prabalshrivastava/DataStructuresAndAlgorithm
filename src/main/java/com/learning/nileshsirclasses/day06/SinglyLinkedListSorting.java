@@ -1,17 +1,17 @@
-package com.learning.nileshsirclasses.day03;
+package com.learning.nileshsirclasses.day06;
 
 import static java.lang.System.out;
 
-public class SinglyLinearLinkedList {
+public class SinglyLinkedListSorting {
     //list of items linked together
     public static void main(String[] args) {
 
         //case 0 empty SLLL display called.
-//        SinglyLinearLinkedList singlyLinearLinkedList = new SinglyLinearLinkedList();
+//        SinglyLinkedListSorting singlyLinearLinkedList = new SinglyLinkedListSorting();
 //        singlyLinearLinkedList.display();
 
         //case 1 filled SLLL display called and addLast() also tested.
-//        SinglyLinearLinkedList singlyLinearLinkedList = new SinglyLinearLinkedList();
+//        SinglyLinkedListSorting singlyLinearLinkedList = new SinglyLinkedListSorting();
 //        singlyLinearLinkedList.display();
 //        singlyLinearLinkedList.addLast(11);
 //        singlyLinearLinkedList.display();
@@ -24,7 +24,7 @@ public class SinglyLinearLinkedList {
 
 
         //case 2 filled SLLL display called and addFirst() also tested.
-//        SinglyLinearLinkedList singlyLinearLinkedList = new SinglyLinearLinkedList();
+//        SinglyLinkedListSorting singlyLinearLinkedList = new SinglyLinkedListSorting();
 //        singlyLinearLinkedList.display();
 //        singlyLinearLinkedList.addFirst(11);
 //        singlyLinearLinkedList.display();
@@ -37,7 +37,7 @@ public class SinglyLinearLinkedList {
 
 
 //        case 3 filled SLLL display called and addLast() also tested.
-//        SinglyLinearLinkedList singlyLinearLinkedList = new SinglyLinearLinkedList();
+//        SinglyLinkedListSorting singlyLinearLinkedList = new SinglyLinkedListSorting();
 //        singlyLinearLinkedList.display();
 //        singlyLinearLinkedList.addLast(11);
 //        singlyLinearLinkedList.display();
@@ -49,7 +49,7 @@ public class SinglyLinearLinkedList {
 //        singlyLinearLinkedList.display();
 
 //      case 4 Add to a list with only 1 element at the first position
-//        SinglyLinearLinkedList singlyLinearLinkedList = new SinglyLinearLinkedList();
+//        SinglyLinkedListSorting singlyLinearLinkedList = new SinglyLinkedListSorting();
 //        singlyLinearLinkedList.display();
 //        singlyLinearLinkedList.addFirst(10);
 //        singlyLinearLinkedList.display();
@@ -57,14 +57,14 @@ public class SinglyLinearLinkedList {
 //        singlyLinearLinkedList.display();
 
 //      case 5 Add to a list with no element at the first position
-//        SinglyLinearLinkedList singlyLinearLinkedList = new SinglyLinearLinkedList();
+//        SinglyLinkedListSorting singlyLinearLinkedList = new SinglyLinkedListSorting();
 //        singlyLinearLinkedList.display();
 //        singlyLinearLinkedList.addAtPositionFromScratch(11, 2);
 //        singlyLinearLinkedList.display();
 
 
 //      case 5 Add to a list with position>length
-        SinglyLinearLinkedList singlyLinearLinkedList = new SinglyLinearLinkedList();
+        com.learning.nileshsirclasses.day06.SinglyLinkedListSorting singlyLinearLinkedList = new com.learning.nileshsirclasses.day06.SinglyLinkedListSorting();
         singlyLinearLinkedList.display();
         singlyLinearLinkedList.addAtPositionFromScratch(11, 1);
         singlyLinearLinkedList.display();
@@ -82,15 +82,15 @@ public class SinglyLinearLinkedList {
 
     }
 
-    Node head;
+    com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node head;
 
-    public SinglyLinearLinkedList() {
+    public SinglyLinkedListSorting() {
         head = null;
     }
 
     public static class Node {
         private int data;
-        private Node next;
+        private com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node next;
 
         public Node() {
             data = 0;
@@ -101,7 +101,7 @@ public class SinglyLinearLinkedList {
             this.data = data;
         }
 
-        public Node(int data, Node next) {
+        public Node(int data, com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node next) {
             this.data = data;
             this.next = next;
         }
@@ -110,7 +110,7 @@ public class SinglyLinearLinkedList {
     public void addFirst(int first) {
         //make before break
         //create the new Node and initialize
-        Node newNode = new Node(first);
+        com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node newNode = new com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node(first);
 
         //point the newNode's next to the head
         newNode.next = head;
@@ -139,8 +139,8 @@ public class SinglyLinearLinkedList {
             delFirst();
         }
 
-        Node temp = null;
-        Node trav = head;
+        com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node temp = null;
+        com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node trav = head;
         while (trav.next != null) {
             temp = trav;
             trav = trav.next;
@@ -162,11 +162,11 @@ public class SinglyLinearLinkedList {
         //mark the node to be deleted as temp
         //update trav to trav.next.next
 
-        Node trav = head;
+        com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node trav = head;
         for (int i = 0; i < position - 1; i++) {
             trav = trav.next;
         }
-        Node temp = trav.next;
+        com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node temp = trav.next;
         //special case 4 when position == length
         if (temp == null)
             throw new RuntimeException("invalid position");
@@ -185,11 +185,11 @@ public class SinglyLinearLinkedList {
             addFirst(position);
         } else {
             //create the node
-            Node newNode = new Node(value, null);
+            com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node newNode = new com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node(value, null);
 
 
             // Traverse at the position
-            Node trav = head;
+            com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node trav = head;
             for (int i = 1; i < position - 1; i++) {
                 if (trav == null)
                     throw new RuntimeException("Invalid position " + position);
@@ -206,7 +206,7 @@ public class SinglyLinearLinkedList {
 
     public void addAtPositionFromScratch(int value, int position) {
         //create the node
-        Node newNode = new Node(value, null);
+        com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node newNode = new com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node(value, null);
 
         //special case
         // Empty LL ie head == null
@@ -222,7 +222,7 @@ public class SinglyLinearLinkedList {
             addFirst(value);
         else {
             // Traverse at the position
-            Node trav = head;
+            com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node trav = head;
             for (int i = 1; i < position - 1; i++) {
                 trav = trav.next;
                 //spl 3. if pos to add is beyond length of list, throw error
@@ -236,9 +236,9 @@ public class SinglyLinearLinkedList {
     }
 
     public void addLast(int lastValue) {
-        Node newNode = new Node(lastValue, null);
+        com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node newNode = new com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node(lastValue, null);
 
-        Node trav = head;
+        com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node trav = head;
         if (head == null) {
             head = newNode;
         } else {
@@ -250,7 +250,7 @@ public class SinglyLinearLinkedList {
     }
 
     public void display() {
-        Node trav = head;
+        com.learning.nileshsirclasses.day06.SinglyLinkedListSorting.Node trav = head;
         out.print("display called : ");
         while (trav != null) {
             out.print(trav.data + ",");
@@ -259,4 +259,3 @@ public class SinglyLinearLinkedList {
         out.println();
     }
 }
-

@@ -1,10 +1,10 @@
-package com.learning.nileshsirclasses.day05;
+package com.learning.nileshsirclasses.day06;
 
-import org.w3c.dom.Node;
+import java.util.ArrayList;
 
 import static java.lang.System.out;
 
-public class DoublyLinearLinkedList {
+public class DoublyCircularLinkedList {
     Node head;
     int count;
 
@@ -134,7 +134,7 @@ public class DoublyLinearLinkedList {
         Node newNode = new Node(lastValue);
 
         if (head == null) {
-            head = newNode;
+//            head = newNode;
         } else {
             //traverse to last
             Node trav = head;
@@ -212,7 +212,7 @@ public class DoublyLinearLinkedList {
 //        doublyLinearLinkedList.display();
 
 
-        DoublyLinearLinkedList doublyLinearLinkedList = new DoublyLinearLinkedList();
+        DoublyCircularLinkedList doublyLinearLinkedList = new DoublyCircularLinkedList();
         doublyLinearLinkedList.display();
         doublyLinearLinkedList.addLast(10);
         doublyLinearLinkedList.display();
